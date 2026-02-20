@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://csp76gra7hilx"]
+
+[ext_resource type="Texture2D" uid="uid://c5l85iltkewcj" path="res://assets/grass.png" id="1_uwrxv"]
+
+[node name="Game" type="Node" unique_id=1921397457]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=267905886]
+position = Vector2(352, 192)
+texture = ExtResource("1_uwrxv")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true

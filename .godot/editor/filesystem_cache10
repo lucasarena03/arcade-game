@@ -1,0 +1,11 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1771560978
+README.md::TextFile::-1::1771560900::0::1::::<><><>0<>0<><>::
+::res://assets/::1771561627
+enemy_player.png::CompressedTexture2D::5637585791189222296::1771561627::1771561629::1::::<><><>0<>0<>3fe2978bd12ed130d144df91507c934e<>res://.godot/imported/enemy_player.png-d9fc97604f723c36e50a61ff9cb1c8bd.ctex::
+football.png::CompressedTexture2D::3791661410233161303::1771561336::1771561629::1::::<><><>0<>0<>48ae241208563c1cd5992c2ffe79118b<>res://.godot/imported/football.png-e37d7f8226e4119f817b28e0d848d881.ctex::
+friendly_player.png::CompressedTexture2D::4558261345897636854::1771561538::1771561629::1::::<><><>0<>0<>7f47737e00d3a797c3e11b8198a185fa<>res://.godot/imported/friendly_player.png-91da621f95ac627813491ca317cc04b2.ctex::
+grass.png::CompressedTexture2D::6903272504456740229::1771561183::1771561184::1::::<><><>0<>0<>4e3977509d2d007c48b1b8ad6617ffec<>res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex::
+::res://scenes/::1771561207
+game.tscn::PackedScene::6069204864006083749::1771561207::0::1::::<><><>0<>0<><>::uid://c5l85iltkewcj::::res://assets/grass.png
+::res://scripts/::1771560970

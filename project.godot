@@ -10,9 +10,16 @@ config_version=5
 
 [application]
 
-config/name="Endless Runner"
+config/name="Football Game"
+run/main_scene="uid://csp76gra7hilx"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=384
+window/stretch/mode="viewport"
 
 [physics]
 
