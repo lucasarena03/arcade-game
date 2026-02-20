@@ -1,1 +1,7 @@
 res://scenes/game.tscn
+res://scenes/player.tscn
+res://scripts/player.gd
+res://scenes/ball.tscn
+res://scripts/ball.gd
+res://scripts/endzone.gd
+res://scripts/game.gd
