@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://csp76gra7hilx"]
+
+[ext_resource type="Script" uid="uid://dabhu3yvvtwkm" path="res://scripts/game.gd" id="1_iywne"]
+[ext_resource type="Texture2D" uid="uid://c5l85iltkewcj" path="res://assets/grass.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c5sgnp4lmudhw" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://gcbabqgc88yr" path="res://scenes/ball.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://d270ycw5sv0pf" path="res://scripts/endzone.gd" id="4_lbhrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(96, 384)
+
+[node name="Game" type="Node" unique_id=1921397457]
+script = ExtResource("1_iywne")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=267905886]
+position = Vector2(352, 192)
+texture = ExtResource("1_uwrxv")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Ball" parent="." unique_id=380215034 instance=ExtResource("3_lnu2h")]
+position = Vector2(224, 192)
+
+[node name="Player" parent="." unique_id=1709095921 instance=ExtResource("2_yqjtg")]
+position = Vector2(128, 192)
+
+[node name="Endzone" type="Area2D" parent="." unique_id=1130507858]
+position = Vector2(672, 192)
+script = ExtResource("4_lbhrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Endzone" unique_id=692936610]
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1350042170]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=413084335]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/Control" unique_id=1225987697]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 2

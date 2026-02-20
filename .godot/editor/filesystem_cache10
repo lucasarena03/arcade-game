@@ -1,0 +1,17 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1771562005
+README.md::TextFile::-1::1771560900::0::1::::<><><>0<>0<><>::
+::res://assets/::1771563481
+enemy_player.png::CompressedTexture2D::5637585791189222296::1771561627::1771561629::1::::<><><>0<>0<>3fe2978bd12ed130d144df91507c934e<>res://.godot/imported/enemy_player.png-d9fc97604f723c36e50a61ff9cb1c8bd.ctex::
+football.png::CompressedTexture2D::3791661410233161303::1771561336::1771561629::1::::<><><>0<>0<>48ae241208563c1cd5992c2ffe79118b<>res://.godot/imported/football.png-e37d7f8226e4119f817b28e0d848d881.ctex::
+friendly_player.png::CompressedTexture2D::4558261345897636854::1771561538::1771561629::1::::<><><>0<>0<>7f47737e00d3a797c3e11b8198a185fa<>res://.godot/imported/friendly_player.png-91da621f95ac627813491ca317cc04b2.ctex::
+grass.png::CompressedTexture2D::6903272504456740229::1771563481::1771563482::1::::<><><>0<>0<>4e3977509d2d007c48b1b8ad6617ffec<>res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex::
+::res://scenes/::1771563455
+game.tscn::PackedScene::6069204864006083749::1771563455::0::1::::<><><>0<>0<><>::uid://dabhu3yvvtwkm::::res://scripts/game.gd<>uid://c5l85iltkewcj::::res://assets/grass.png<>uid://c5sgnp4lmudhw::::res://scenes/player.tscn<>uid://gcbabqgc88yr::::res://scenes/ball.tscn<>uid://d270ycw5sv0pf::::res://scripts/endzone.gd
+player.tscn::PackedScene::6916053826543807760::1771562671::0::1::::<><><>0<>0<><>::uid://b57b5sst0g8rq::::res://assets/friendly_player.png<>uid://bxhlr305wupbe::::res://scripts/player.gd
+ball.tscn::PackedScene::425322611845922349::1771562244::0::1::::<><><>0<>0<><>::uid://buaydyseq780b::::res://assets/football.png<>uid://bvp6jyktlyxud::::res://scripts/ball.gd
+::res://scripts/::1771563308
+player.gd::GDScript::4015914487730258658::1771563308::0::1::::Player<>Area2D<><>0<>0<><>::
+ball.gd::GDScript::3893251642210973143::1771563238::0::1::::<>Area2D<><>0<>0<><>::
+endzone.gd::GDScript::9121981841729338479::1771562507::0::1::::Endzone<>Area2D<><>0<>0<><>::
+game.gd::GDScript::7161788672372915648::1771563446::0::1::::<>Node<><>0<>0<><>::
