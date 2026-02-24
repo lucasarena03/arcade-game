@@ -13,7 +13,7 @@ config_version=5
 config/name="Football Game"
 run/main_scene="uid://csp76gra7hilx"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cvpgrjwayb8l2"
 
 [display]
 
@@ -32,3 +32,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
