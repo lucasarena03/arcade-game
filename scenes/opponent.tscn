@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vsaycw8ginm8"]
+
+[ext_resource type="Script" uid="uid://b4pw4bpqvrwof" path="res://scripts/opponent.gd" id="1_ha0xr"]
+[ext_resource type="Texture2D" uid="uid://cmk5hj0uuahsy" path="res://assets/enemy_player.png" id="1_ocjdi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ocjdi"]
+radius = 13.0
+height = 48.0
+
+[node name="Opponent" type="Area2D" unique_id=2022883680]
+texture_filter = 1
+script = ExtResource("1_ha0xr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2006529235]
+scale = Vector2(3, 3)
+texture = ExtResource("1_ocjdi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1918300936]
+shape = SubResource("CapsuleShape2D_ocjdi")

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://csp76gra7hilx"]
+
+[ext_resource type="Script" uid="uid://dabhu3yvvtwkm" path="res://scripts/game.gd" id="1_iywne"]
+[ext_resource type="Texture2D" uid="uid://c5l85iltkewcj" path="res://assets/grass.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c5sgnp4lmudhw" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://gcbabqgc88yr" path="res://scenes/ball.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://d270ycw5sv0pf" path="res://scripts/endzone.gd" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://c7gh64r2vujo1" path="res://assets/redo.png" id="6_p57ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(96, 384)
+
+[node name="Game" type="Node" unique_id=1921397457]
+script = ExtResource("1_iywne")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1469639077]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uwrxv")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Ball" parent="." unique_id=380215034 instance=ExtResource("3_lnu2h")]
+unique_name_in_owner = true
+position = Vector2(560, 192)
+
+[node name="Player" parent="." unique_id=1709095921 instance=ExtResource("2_yqjtg")]
+unique_name_in_owner = true
+position = Vector2(128, 192)
+
+[node name="Endzone" type="Area2D" parent="." unique_id=1130507858]
+position = Vector2(672, 192)
+script = ExtResource("4_lbhrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Endzone" unique_id=692936610]
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="Opponents" type="Node" parent="." unique_id=1616395277]
+unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1350042170]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=413084335]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1171689302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="RetryButton" type="Button" parent="CanvasLayer/Control/MarginContainer" unique_id=1226899604]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/RetryButton" unique_id=437421034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/RetryButton/MarginContainer" unique_id=1871020886]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("6_p57ef")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/Control/MarginContainer" unique_id=1225987697]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LossLabel" type="Label" parent="CanvasLayer/Control/MarginContainer" unique_id=1117429672]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "You were tackled!
+You managed to score X touchdowns before being caught.
+
+Tap anywhere to play again"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="CanvasLayer/Control" to="." method="_on_control_gui_input"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/RetryButton" to="." method="_on_retry_button_pressed"]
