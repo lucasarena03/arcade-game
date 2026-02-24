@@ -4,12 +4,14 @@
 [ext_resource type="Script" uid="uid://bvp6jyktlyxud" path="res://scripts/ball.gd" id="1_cxlvu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
+radius = 12.0
 
 [node name="Ball" type="Area2D" unique_id=380215034]
 texture_filter = 1
 script = ExtResource("1_cxlvu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=300277329]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_7s4qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=914689654]

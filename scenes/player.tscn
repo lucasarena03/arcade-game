@@ -4,13 +4,14 @@
 [ext_resource type="Script" uid="uid://bxhlr305wupbe" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+height = 64.0
 
 [node name="Player" type="Area2D" unique_id=1709095921]
 texture_filter = 1
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=902984702]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=357326455]
